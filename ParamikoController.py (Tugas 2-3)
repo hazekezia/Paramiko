@@ -27,7 +27,7 @@ def pilihanpertama():
     conn.send("cd tugas_pp\n")
     conn.send("python3 t1\n")
 
-    time.sleep(2)
+    time.sleep(1)
     output = conn.recv(65535).decode('ascii')
     print(output)
 
@@ -44,7 +44,7 @@ def pilihankedua ():
         conn.send("cd tugas_pp\n")
         conn.send("python3 t1\n")
 
-        time.sleep(2)
+        time.sleep(1)
         output = conn.recv(65535).decode('ascii')
         print(output)
         print()
