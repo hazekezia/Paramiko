@@ -25,8 +25,7 @@ def pilihanpertama():
     conn.invoke_shell()
 
     #commandline
-    conn.send("cd tugas_pp\n")
-    conn.send("python3 t1\n")
+    conn.send("python3 nodes.py\n")
 
     time.sleep(1)
     output = conn.recv(65535).decode('ascii')
@@ -43,8 +42,7 @@ def pilihankedua ():
         conn.invoke_shell()
 
         #commandline
-        conn.send("cd tugas_pp\n")
-        conn.send("python3 t1\n")
+        conn.send("python3 nodes.py\n")
 
         time.sleep(1)
         output = conn.recv(65535).decode('ascii')
