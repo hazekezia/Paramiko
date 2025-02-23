@@ -2,9 +2,9 @@ import paramiko
 import time
 
 #Settings
-ip_list = ["192.168.43.234","192.168.43.153","192.168.43.247","192.168.43.249"]
-username = "root"
-password = "haze"
+ip_list = ["YOUR_IP1","YOUR_IP2","YOUR_IP3","YOUR_IP4"]
+username = "YOUR_USERNAME"
+password = "YOUR_PASSWORD"
 
 ssh_client = paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -24,6 +24,7 @@ def pilihanpertama():
     conn = ssh_client.get_transport().open_session()
     conn.invoke_shell()
 
+    #commandline
     conn.send("cd tugas_pp\n")
     conn.send("python3 t1\n")
 
@@ -41,6 +42,7 @@ def pilihankedua ():
         conn = ssh_client.get_transport().open_session()
         conn.invoke_shell()
 
+        #commandline
         conn.send("cd tugas_pp\n")
         conn.send("python3 t1\n")
 
